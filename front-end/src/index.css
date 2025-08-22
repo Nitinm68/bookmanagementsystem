@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Brand Logo / Name */
+.book_management {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #f97316;
+  /* Default orange */
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.book_management:hover {
+  transform: scale(1.1);
+  color: #ec4899;
+  /* Pink on hover */
+  background-color: rgba(255, 165, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(133, 116, 116, 0.3);
+}
+
+/* Page Titles */
+.my_title {
+  margin: 2% 2%;
+  font-family: 'Georgia', Cambria, Cochin, Times, 'Times New Roman', serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #f97316, #ec4899);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.my_title:hover {
+  transform: scale(1.05);
+  color: #fff;
+  background-color: rgba(255, 165, 0, 0.8);
+}

@@ -1,0 +1,129 @@
+/* contact.css */
+body {
+    background: linear-gradient(135deg, #d1c3c3, #2b2b2b);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 0.8s ease;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #042f2f;
+    letter-spacing: 1px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+    color: black
+        /*  rgba(255, 255, 255, 0.6); */
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid #00ffff;
+}
+
+.contact-container textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.contact-container button {
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #00ffff, #0077ff);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.contact-container button:hover {
+    background: linear-gradient(135deg, #0077ff, #00ffff);
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.contact-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-icons .icon {
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons .icon:hover {
+    transform: scale(1.2);
+    color: #0077b6;
+}
+
+.icon.telegram {
+    color: white;
+}
+
+.icon.mail {
+    color: white;
+}
+
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .contact-container {
+        padding: 20px;
+    }
+}
