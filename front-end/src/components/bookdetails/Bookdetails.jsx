@@ -13,7 +13,9 @@ export const Bookdetails = () => {
   // Function to fetch all book details from the API
   const getAllBookDetails = async () => {
     try {
-      const res = await axios.get("http://localhost:4004/api/books");
+      const res = await axios.get(
+        "https://bookmanagementsystem-9f70.onrender.com/api/books"
+      );
       setBookstore(res.data.books || res.data);
     } catch (err) {
       console.error("Error fetching book details:", err);
@@ -66,7 +68,7 @@ export const Bookdetails = () => {
   }, []);
 
   const renderFile = (fileName) => {
-    const fileUrl = `http://localhost:4004/uploads/${fileName}`;
+    const fileUrl = `https://bookmanagementsystem-9f70.onrender.com/uploads/${fileName}`;
     if (fileName?.endsWith(".pdf")) {
       return (
         <div>

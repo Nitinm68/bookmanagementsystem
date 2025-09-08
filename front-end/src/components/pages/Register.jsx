@@ -18,7 +18,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4004/api/auth/register", formData);
+      await axios.post(
+        "https://bookmanagementsystem-9f70.onrender.com/api/auth/register",
+        formData
+      );
       // ✅ Replaced alert() with toast.success()
       toast.success("🎉 Registered Successfully! Please login.");
       navigate("/login");

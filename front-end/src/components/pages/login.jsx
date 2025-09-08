@@ -26,10 +26,14 @@ const Login = () => {
     setShowError(false);
 
     try {
-      const res = await axios.post("http://localhost:4004/api/auth/login", {
-        email,
-        password,
-      },{withCredentials:true});
+      const res = await axios.post(
+        "https://bookmanagementsystem-9f70.onrender.com/api/auth/login",
+        {
+          email,
+          password,
+        },
+        { withCredentials: true }
+      );
 
       console.log(res.data);
       toast.success("Login successful!");

@@ -21,7 +21,7 @@ export const Dashboard = () => {
 
     // Fetch all books from the API
     axios
-      .get("http://localhost:4004/api/books")
+      .get("https://bookmanagementsystem-9f70.onrender.com/api/books")
       .then((res) => {
         const booksData = res.data;
         setTotalBooks(booksData.length); // Get the total count

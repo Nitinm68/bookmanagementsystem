@@ -17,7 +17,9 @@ export const Edit = () => {
   // Function to fetch book data by ID
   const getDataById = async () => {
     try {
-      const res = await axios.get("http://localhost:4004/api/books/" + id);
+      const res = await axios.get(
+        "https://bookmanagementsystem-9f70.onrender.com/api/books/" + id
+      );
       console.log(res);
       setBook(res.data);
     } catch (err) {
@@ -31,7 +33,7 @@ export const Edit = () => {
       e.preventDefault();
       // ✅ Corrected: The 'book' state object is correctly sent in the PUT request
       const updateRes = await axios.put(
-        "http://localhost:4004/api/books/" + id,
+        "https://bookmanagementsystem-9f70.onrender.com/api/books/" + id,
         book
       );
       console.log(updateRes);

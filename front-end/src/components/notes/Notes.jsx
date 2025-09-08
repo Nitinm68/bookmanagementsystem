@@ -88,7 +88,9 @@ const Notes = () => {
   // Fetch all notes
   const fetchNotes = async () => {
     try {
-      const res = await axios.get("http://localhost:4004/api/notes");
+      const res = await axios.get(
+        "https://bookmanagementsystem-9f70.onrender.com/api/notes"
+      );
       setNotes(res.data);
     } catch (err) {
       console.error("Error fetching notes:", err);
@@ -99,10 +101,13 @@ const Notes = () => {
   const addNote = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:4004/api/notes", {
-        title,
-        content,
-      });
+      const res = await axios.post(
+        "https://bookmanagementsystem-9f70.onrender.com/api/notes",
+        {
+          title,
+          content,
+        }
+      );
       setNotes([...notes, res.data]); // update list with new note
       setTitle("");
       setContent("");
@@ -114,7 +119,9 @@ const Notes = () => {
   // Delete a note
   const deleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:4004/api/notes/${id}`);
+      await axios.delete(
+        `https://bookmanagementsystem-9f70.onrender.com/api/notes/${id}`
+      );
       setNotes(notes.filter((note) => note._id !== id));
     } catch (err) {
       console.error("Error deleting note:", err);
