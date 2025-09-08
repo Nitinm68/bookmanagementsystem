@@ -22,7 +22,7 @@ const app = express();
 /* ---------- MIDDLEWARE ---------- */
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend ka URL
+    origin: "https://bookmanagementsystem-xt47.vercel.app/login", // frontend ka URL
     credentials: true, // cookies allow karne ke liye
   })
 );
